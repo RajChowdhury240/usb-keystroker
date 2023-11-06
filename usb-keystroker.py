@@ -15,7 +15,7 @@ shiftKeys = {"04":"A", "05":"B", "06":"C", "07":"D", "08":"E", "09":"F", "0a":"G
 def main():
     if len(sys.argv) != 2:
         print("Usage : ")
-        print("python usb-keystroker.py data.pcap")
+        print("python3 usb-keystroker.py data.pcap")
         exit(1)
 
     pcapFilePath = sys.argv[1]
