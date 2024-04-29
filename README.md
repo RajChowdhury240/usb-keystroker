@@ -7,4 +7,4 @@ $ pip3 install -r requirements.txt
 $ python3 usb-keystroker.py file.pcap
 ```
 
-![](usb.png)
+![](snip.jpg)
