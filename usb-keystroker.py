@@ -4,7 +4,7 @@ import sys
 import os
 from rich.progress import Progress
 
-DataFileName = "usb.dat"
+source = "usb.dat"
 
 presses = []
 
@@ -23,9 +23,9 @@ def main():
     with Progress() as progress:
         task = progress.add_task("[cyan]Processing...", total=100)
 
-        os.system("tshark -r %s -T fields -e usb.capdata 'usb.data_len == 8' > %s" % (pcapFilePath, DataFileName))
+        os.system("tshark -r %s -T fields -e usb.capdata 'usb.data_len == 8' > %s" % (pcapFilePath, source))
 
-        with open(DataFileName, "r") as f:
+        with open(source, "r") as f:
             lines = list(f)
             progress.update(task, completed=20)
 
@@ -51,7 +51,7 @@ def main():
             print("[-] Unknown Key Detected : %s" % (Bytes[0]))
     print("[+] Found : %s" % (result))
 
-    os.system("rm ./%s" % (DataFileName))
+    os.system("rm ./%s" % (source))
 
 
 if __name__ == "__main__":
