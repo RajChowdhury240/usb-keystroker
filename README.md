@@ -8,3 +8,5 @@ $ python3 usb-keystroker.py file.pcap
 ```
 
 ![](snip.jpg)
+
+<img width="1290" alt="image" src="https://github.com/user-attachments/assets/ae1db3f3-8b4e-48be-930c-bd9081db8594">
